@@ -1064,7 +1064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849215832}
   m_Layer: 0
-  m_Name: GenPointObs_1
+  m_Name: ObsDestrPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1078,7 +1078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849215831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.4, y: -4.09, z: 0}
+  m_LocalPosition: {x: -21.3, y: -4.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -2029,10 +2029,11 @@ MonoBehaviour:
   generationPoint: {fileID: 1863235813}
   distanceBetween: 0
   timer: 0
-  timeRange: 5
+  timeRange: 1
   numberWhenCreate: 0
-  prefabObstacle: {fileID: 6348384087510195410, guid: 7e3f71a254142e241a27e8628a26a06a,
+  prefabObstacle: {fileID: 7070222004073784031, guid: 7e3f71a254142e241a27e8628a26a06a,
     type: 3}
+  actualPlatPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1858145086
 Transform:
   m_ObjectHideFlags: 0

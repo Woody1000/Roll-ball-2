@@ -11,10 +11,13 @@ public class PlatformGenerator : MonoBehaviour
     public float timeRange;
     public int numberWhenCreate;
     public GameObject prefabObstacle;
+    public Vector3 actualPlatPosition; 
+
 
     Random rand = new Random();
 
     private float _platformWidth;
+    private int count = 0;
     void Start()
     {
         _platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;
@@ -28,6 +31,7 @@ public class PlatformGenerator : MonoBehaviour
         if(transform.position.x < generationPoint.position.x)
         {
             transform.position = new Vector3(transform.position.x + _platformWidth + distanceBetween, transform.position.y, transform.position.z);
+            actualPlatPosition = transform.position;
 
             Instantiate(thePlatform, transform.position, transform.rotation);
         }
@@ -53,8 +57,19 @@ public class PlatformGenerator : MonoBehaviour
 
         if (numberWhenCreate == 2)
         {
-            transform.position = new Vector3(thePlatform.transform.position.x, thePlatform.transform.position.y + 1, thePlatform.transform.position.z);
-            Instantiate(prefabObstacle, transform.position, transform.rotation);
+            transform.position = new Vector3(actualPlatPosition.x, actualPlatPosition.y , actualPlatPosition.z);
+            if (count < 1 )
+            {
+                Instantiate(prefabObstacle, transform.position, transform.rotation);
+                count++;
+            }
         }
+
+        if(numberWhenCreate != 2)
+        {
+            count = 0;
+        }
+
+       
     }
 }
