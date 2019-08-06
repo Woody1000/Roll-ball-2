@@ -343,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203459972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.48, y: 1.31, z: 0}
+  m_LocalPosition: {x: -2.63, y: -4.186, z: 0.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2032,6 +2032,8 @@ MonoBehaviour:
   timeRange: 1
   numberWhenCreate: 0
   prefabObstacle: {fileID: 7070222004073784031, guid: 7e3f71a254142e241a27e8628a26a06a,
+    type: 3}
+  prefabCoin: {fileID: 5856283097307271910, guid: 8fee1b7f94d2f6744a64b004fa273d7b,
     type: 3}
   actualPlatPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1858145086

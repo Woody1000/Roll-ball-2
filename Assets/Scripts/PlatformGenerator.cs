@@ -11,6 +11,7 @@ public class PlatformGenerator : MonoBehaviour
     public float timeRange;
     public int numberWhenCreate;
     public GameObject prefabObstacle;
+    public GameObject prefabCoin;
     public Vector3 actualPlatPosition; 
 
 
@@ -18,6 +19,8 @@ public class PlatformGenerator : MonoBehaviour
 
     private float _platformWidth;
     private int count = 0;
+    private int count_2 = 0;
+
     void Start()
     {
         _platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;
@@ -37,6 +40,8 @@ public class PlatformGenerator : MonoBehaviour
         }
 
         CreateObstacle();
+
+        CreateCoins();
 
         
     }
@@ -71,5 +76,24 @@ public class PlatformGenerator : MonoBehaviour
         }
 
        
+    }
+
+    public void CreateCoins()
+    {
+        if(numberWhenCreate == 1)
+        {
+            transform.position = new Vector3(actualPlatPosition.x + (count_2 * 2), actualPlatPosition.y, actualPlatPosition.z);
+            if(count_2 < 3)
+            {
+                Instantiate(prefabCoin, transform.position, transform.rotation);
+                count_2++;
+            }
+
+        }
+
+        if(numberWhenCreate != 1)
+        {
+            count_2 = 0;
+        }
     }
 }
